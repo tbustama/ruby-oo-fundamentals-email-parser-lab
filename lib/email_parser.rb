@@ -10,8 +10,7 @@ class EmailAddressParser
     attr_accessor :emails
 
     def parse
-        email_arr = @emails.split(" ").map {|ele| ele.delete(",")}
-        email_arr.uniq
+        @emails.split(" ").map {|ele| ele.delete(",")}.uniq
     end
     
 end
